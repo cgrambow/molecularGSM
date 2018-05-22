@@ -21,7 +21,7 @@ using namespace std;
 #define HESS_TANG 1
 #define RIBBONS 0
 
-#define FINAL_FREQ 1
+#define FINAL_FREQ 0
 
 //skip one opt round for converged node
 #define ONE_SKIP 0
