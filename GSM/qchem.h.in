@@ -7,7 +7,7 @@
 #define USE_ASE ${GSM_ENABLE_ASE}
 #define USE_GAUSSIAN ${GSM_ENABLE_GAUSSIAN}
 #define USE_ORCA ${GSM_ENABLE_ORCA}
-#define THREADS_ON 0
+#define THREADS_ON 1
 #define WRITE_FILES 0
 #define USE_KNNR 0
 #define KNN_K 3
