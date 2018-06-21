@@ -263,12 +263,12 @@ double QChem::grads(double* coords, double* grad)
   nstr=StringTools::int2str(ncpu,4,"0");
   string nstrc = StringTools::int2str(ncpu,1,"0");
   if (ncpu==1)
-    calc_command="cd "+fileloc+"; qchem -save ";
+    calc_command="cd "+fileloc+"; qchem -seq -nt 1 -save ";
   else
 #if THREADS_ON
-    calc_command="cd "+fileloc+"; qchem -nt "+nstrc+" -save ";
+    calc_command="cd "+fileloc+"; qchem -slurm -nt "+nstrc+" -save ";
 #else
-    calc_command="cd "+fileloc+"; qchem -np "+nstrc+" -save ";
+    calc_command="cd "+fileloc+"; qchem -slurm -np "+nstrc+" -save ";
 #endif
   calc_command=calc_command+qcinfile;
   calc_command=calc_command+" "+qcoutfile;
